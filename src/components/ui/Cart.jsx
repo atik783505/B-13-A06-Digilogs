@@ -16,6 +16,7 @@ const Cart = ({carted,productPrice,setproductPrice,cartedProducts,setcartedPtodu
                 <h4 className='font-semibold text-5'>{carted.name}</h4>
                 <p className='text-[#627382]'>{carted.price}$</p>
             </div>
+            
             </div>
             <button onClick={()=> removeProductHandler(carted)} className='badge text-red-600 bg-red-300'>Remove</button>
         </div>
