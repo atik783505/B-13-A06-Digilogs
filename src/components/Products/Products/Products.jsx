@@ -5,6 +5,7 @@ import Cartproducts from '../Cartproducts/Cartproducts';
 const Products = ({productData,cartedProducts,setcartedPtoduct}) => {
     const product = use(productData)
     const [selectedProduct,setselectedProduct] = useState(true)
+    const [productPrice,setproductPrice] = useState(0)
     
     return (
         <div className='w-10/12 mx-auto mt-25'>
@@ -16,7 +17,7 @@ const Products = ({productData,cartedProducts,setcartedPtoduct}) => {
                     <button onClick={() => setselectedProduct(false)} className={`btn rounded-full ${selectedProduct === false? 'text-white bg-gradient-to-r from-blue-500 to-purple-500':'bg-white'} `}>Cart ({cartedProducts.length})</button>
                 </div>
             </div>
-            {selectedProduct ? <Availableproducts cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} product={product}></Availableproducts>:<Cartproducts cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct}></Cartproducts>}
+            {selectedProduct ? <Availableproducts cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} product={product} productPrice={productPrice} setproductPrice={setproductPrice}></Availableproducts>:<Cartproducts cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} product={product} productPrice={productPrice} setproductPrice={setproductPrice}></Cartproducts>}
         </div>
     );
 };
