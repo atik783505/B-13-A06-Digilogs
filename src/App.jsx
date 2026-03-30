@@ -1,19 +1,21 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/Products/Products/Products'
 
 function App() {
-const productData = fetch('/data.json').then(res => res.json())
+  const productData = fetch('/data.json').then(res => res.json())
+  const [cartedProducts, setcartedPtoduct] = useState([])
 
   return (
+
     <>
-      <Navbar></Navbar>
+      <Navbar cartedProducts={cartedProducts}></Navbar>
       <Banner></Banner>
       <Suspense fallback={<p>products comming</p>}>
-      <Products productData={productData}></Products>
+        <Products cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} productData={productData}></Products>
       </Suspense>
     </>
   )

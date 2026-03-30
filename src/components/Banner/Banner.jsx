@@ -3,7 +3,7 @@ import bannerimg from '../../assets/banner.png'
 
 const Banner = () => {
     return (
-        <div className='flex gap-5 w-10/12 mx-auto justify-between mt-20'>
+        <div className='flex flex-col md:flex-row gap-5 w-10/12 mx-auto justify-between mt-20'>
             <div className='flex flex-col justify-center space-y-8'>
                 <span className='badge font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent'>New: AI-Powered Tools Available</span>
                 <h1 className='text-[72px] font-extrabold leading-[84px]'>Supercharge Your <br /> Digital Workflow</h1>
