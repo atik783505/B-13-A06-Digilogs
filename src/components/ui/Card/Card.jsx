@@ -3,7 +3,12 @@ import { toast } from 'react-toastify';
 
 const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproductPrice }) => {
     const [isbuy,setIsbuy] = useState(false)
+    const isAlreadyInCart = cartedProducts.find(p => p.id === products.id);
     const handleBuy = () => {
+        if(isAlreadyInCart){
+            toast.error('Product already in cart')
+            return
+        }
         const newPrice = productPrice+products.price
         setproductPrice(newPrice)
         setIsbuy(true)
@@ -12,7 +17,7 @@ const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproduct
     }
     return (
         <div>
-            <div className="card bg-base-100 shadow-sm h-full">
+            <div className="card bg-base-100 h-full shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
                 <div className="card-body">
                     <div className='flex justify-end'>
                         <span className={`badge p-2.5 ${products.tagType === 'best seller'?'bg-[#FEF3C6] text-[#BB4D00]': products.tagType === 'popular'? 'bg-[#E1E7FF] text-purple-500':'bg-green-200 text-green-500'}`}>{products.tagType}</span>

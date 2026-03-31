@@ -1,25 +1,27 @@
 import React from 'react';
 import Cart from '../../ui/Cart';
 import { toast } from 'react-toastify';
+import { TbShoppingCartExclamation } from 'react-icons/tb';
 
 const Cartproducts = ({ cartedProducts,setcartedPtoduct,productPrice,setproductPrice }) => {
     const checkoutHandle = () => {
         setproductPrice(0)
         setcartedPtoduct([])
         if(cartedProducts.length === 0){
-            toast.error('there is no product to checkout')
+           toast.info("Please select a product before proceeding to checkout.")
         }else{
 
-            toast.success('Checkout succesfull')
+            toast.success('Checkout Successful!')
         }
     }
     return (
         <div className='p-3 md:p-10 border border-gray-200 rounded-lg'>
-            <h2>Your Cart</h2>
+            <h2 className='text-6 font-bold'>Your Cart</h2>
             <div>
                 {cartedProducts.length === 0 ? 
                 <div className='text-center p-10 md:p-25'>
-                    <h2>no product available</h2>
+                    <TbShoppingCartExclamation className='w-7 mx-auto' />
+                    <h2 className='text-5'>Your Cart is Empty</h2>
                 </div> : 
                 <div>
                     {

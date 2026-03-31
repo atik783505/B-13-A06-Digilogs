@@ -6,9 +6,14 @@ const Cart = ({carted,productPrice,setproductPrice,cartedProducts,setcartedPtodu
         const filteredProduct = cartedProducts.filter(product => product.name !== carted.name)
         setcartedPtoduct(filteredProduct)
         setproductPrice(productPrice-carted.price)
-        toast.success(`${carted.name} Remove Succesfull `)
+        toast.success(`${carted.name} removed successfully! `)
+        if(cartedProducts.length === 0) {
+            setproductPrice(0)
+        }
+        
     }
     return (
+        <>
         <div className='p-1 md:p-3 bg-[#F9FAFC] rounded-lg flex justify-between items-center mb-4'>
             <div className='flex gap-3 md:gap-8 items-center'>
             <img src={carted.icon} alt="" />
@@ -20,6 +25,10 @@ const Cart = ({carted,productPrice,setproductPrice,cartedProducts,setcartedPtodu
             </div>
             <button onClick={()=> removeProductHandler(carted)} className='badge text-red-600 bg-red-300'>Remove</button>
         </div>
+        <div>
+            
+        </div>
+        </>
     );
 };
 

@@ -11,7 +11,7 @@ const Steps = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4  justify-between'>
                 <div className='bg-white space-y-4 text-center p-10'>
                     <div className='flex justify-end text-white'>
-                    <span className='bg-purple-700  p-1 rounded-full'>01</span>
+                    <span className='bg-purple-700 w-6 h-6 badge badge-sm text-white rounded-full'>01</span>
                     </div>
                     <img className='w-[60px] mx-auto' src={account} alt="" />
                     <h2 className='text-[24px] font-bold'>Create Account</h2>
@@ -19,7 +19,7 @@ const Steps = () => {
                 </div>
                 <div className='bg-white space-y-4 text-center p-10'>
                     <div className='flex justify-end text-white'>
-                    <span className='bg-purple-700  p-1 rounded-full'>02</span>
+                    <span className='bg-purple-700 w-6 h-6 badge badge-sm text-white rounded-full'>02</span>
                     </div>
                     <img className='w-[60px] mx-auto' src={product} alt="" />
                     <h2 className='text-[24px] font-bold'>Choose Products</h2>
@@ -27,7 +27,7 @@ const Steps = () => {
                 </div>
                 <div className='bg-white space-y-4 text-center p-10'>
                     <div className='flex justify-end text-white'>
-                    <span className='bg-purple-700  p-1 rounded-full'>03</span>
+                    <span className='bg-purple-700 w-6 h-6 badge badge-sm text-white rounded-full'>03</span>
                     </div>
                     <img className='w-[60px] mx-auto' src={rocket} alt="" />
                     <h2 className='text-[24px] font-bold'>Start Creating</h2>

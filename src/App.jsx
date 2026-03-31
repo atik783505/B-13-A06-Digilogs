@@ -21,7 +21,7 @@ function App() {
       <Navbar cartedProducts={cartedProducts}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Suspense fallback={<p>products comming</p>}>
+      <Suspense fallback={<div className='text-center py-30'><span className="loading loading-bars loading-xl"></span></div>}>
         <Products cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} productData={productData}></Products>
       </Suspense>
       <Steps></Steps>
