@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
 
+import { toast } from 'react-toastify';
 const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproductPrice }) => {
-    const [isbuy,setIsbuy] = useState(false)
-    const isAlreadyInCart = cartedProducts.find(p => p.id === products.id);
+    const isAlreadyBuyed = cartedProducts.find(product => product.name === products.name)
     const handleBuy = () => {
-        if(isAlreadyInCart){
+        if(isAlreadyBuyed){
             toast.error('Product already in cart')
             return
+        }else{
+
+            const newPrice = productPrice+products.price
+            setproductPrice(newPrice)
+            setcartedPtoduct([...cartedProducts,products])
+            toast.success(`${products.name} buyed`)
         }
-        const newPrice = productPrice+products.price
-        setproductPrice(newPrice)
-        setIsbuy(true)
-        setcartedPtoduct([...cartedProducts,products])
-        toast.success(`${products.name} buyed`)
     }
     return (
         <div>
@@ -43,8 +42,8 @@ const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproduct
                     </ul>
 
                     <div className="mt-6">
-                        <button onClick={handleBuy} disabled={isbuy?true:false} className={`btn btn-primary btn-block  text-white rounded-full ${isbuy?'bg-green-600':'bg-gradient-to-r from-blue-500 to-purple-500'}`}>
-                        {isbuy === true ?'Add to Cart':'Buy Now'}</button>
+                        <button onClick={handleBuy} className={`btn btn-primary btn-block  text-white rounded-full ${isAlreadyBuyed?'bg-green-600':'bg-gradient-to-r from-blue-500 to-purple-500'}`}>
+                        {isAlreadyBuyed?'Add to Cart':'Buy Now'}</button>
                     </div>
                 </div>
             </div>
