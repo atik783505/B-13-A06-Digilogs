@@ -8,6 +8,8 @@ import { ToastContainer } from 'react-toastify'
 import Stats from './components/stats/Stats'
 import Footer from './components/footer/Footer'
 import Workflow from './components/Workflow/Workflow'
+import Steps from './components/steps/Steps'
+import Pricing from './components/Pricing/Pricing'
 
 function App() {
   const productData = fetch('/data.json').then(res => res.json())
@@ -22,6 +24,8 @@ function App() {
       <Suspense fallback={<p>products comming</p>}>
         <Products cartedProducts={cartedProducts} setcartedPtoduct={setcartedPtoduct} productData={productData}></Products>
       </Suspense>
+      <Steps></Steps>
+      <Pricing></Pricing>
       <Workflow></Workflow>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

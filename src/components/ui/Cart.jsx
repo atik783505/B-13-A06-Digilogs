@@ -9,11 +9,11 @@ const Cart = ({carted,productPrice,setproductPrice,cartedProducts,setcartedPtodu
         toast.success(`${carted.name} Remove Succesfull `)
     }
     return (
-        <div className='p-3 bg-[#F9FAFC] rounded-lg flex justify-between items-center mb-4'>
-            <div className='flex gap-8 items-center'>
+        <div className='p-1 md:p-3 bg-[#F9FAFC] rounded-lg flex justify-between items-center mb-4'>
+            <div className='flex gap-3 md:gap-8 items-center'>
             <img src={carted.icon} alt="" />
             <div>
-                <h4 className='font-semibold text-5'>{carted.name}</h4>
+                <h4 className='font-semibold text-1 md:text-5'>{carted.name}</h4>
                 <p className='text-[#627382]'>{carted.price}$</p>
             </div>
             

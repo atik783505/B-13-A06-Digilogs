@@ -12,10 +12,10 @@ const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproduct
     }
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-sm h-full">
+            <div className="card bg-base-100 shadow-sm h-full">
                 <div className="card-body">
                     <div className='flex justify-end'>
-                        <span className="badge badge-xs badge-warning p-2.5 bg-amber-200 text-[16px] ">{products.tagType}</span>
+                        <span className={`badge p-2.5 ${products.tagType === 'best seller'?'bg-[#FEF3C6] text-[#BB4D00]': products.tagType === 'popular'? 'bg-[#E1E7FF] text-purple-500':'bg-green-200 text-green-500'}`}>{products.tagType}</span>
                     </div>
                     <img className='w-8 mb-4' src={products.icon} alt="" />
                     <h2 className="text-3xl font-bold">{products.name}</h2>
@@ -38,7 +38,7 @@ const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproduct
                     </ul>
 
                     <div className="mt-6">
-                        <button onClick={handleBuy} disabled={isbuy?true:false} className="btn btn-primary btn-block  text-white rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
+                        <button onClick={handleBuy} disabled={isbuy?true:false} className={`btn btn-primary btn-block  text-white rounded-full ${isbuy?'bg-green-600':'bg-gradient-to-r from-blue-500 to-purple-500'}`}>
                         {isbuy === true ?'Add to Cart':'Buy Now'}</button>
                     </div>
                 </div>

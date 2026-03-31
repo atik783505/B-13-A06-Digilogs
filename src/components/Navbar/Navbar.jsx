@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = ({cartedProducts}) => {
     return (
-        <div className='w-10/12 mx-auto' >
+        <div className='w-11/12 md:w-10/12 mx-auto' >
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -19,7 +19,7 @@ const Navbar = ({cartedProducts}) => {
                             <li><a>FAQ</a></li>
                         </ul>
                     </div>
-                    <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    <h1 className=" text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                         DigiTools
                     </h1>
                 </div>
