@@ -12,6 +12,7 @@ const Cart = ({carted,productPrice,setproductPrice,cartedProducts,setcartedPtodu
         }
         
     }
+    
     return (
         <>
         <div className='p-1 md:p-3 bg-[#F9FAFC] rounded-lg flex justify-between items-center mb-4'>

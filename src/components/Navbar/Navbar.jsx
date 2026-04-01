@@ -38,8 +38,8 @@ const Navbar = ({cartedProducts}) => {
                         <LuShoppingCart className='w-5' />
                        {cartedProducts.length !== 0 ? <span className="badge w-6 h-6 text-white bg-red-600 rounded-full indicator-item ">{cartedProducts.length}</span>:'' }
                     </div>
-
-                    <a className="btn text-white rounded-full bg-gradient-to-r from-blue-500 to-purple-500 ">Get Started</a>
+                    <p>Login</p>
+                    <a className="btn text-white rounded-full bg-gradient-to-r hidden sm:flex from-blue-500 to-purple-500 ">Get Started</a>
                 </div>
             </div>
         </div>

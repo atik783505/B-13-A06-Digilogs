@@ -3,10 +3,10 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className='bg-[#101727] p-25'>
-            <div className='w-11/12 text-white mx-auto  flex flex-col md:flex-row text-center md:text-left justify-between  gap-10 md:gap-5'>
+        <div className='bg-[#101727] py-25'>
+            <div className='w-11/12 md:w-10/12 text-white mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-center justify-between md:text-left  gap-10'>
                 <div>
-                    <h2 className='text-[45px] font-bold'>DigiTools</h2>
+                    <h2 className='text-[35px] font-bold'>DigiTools</h2>
                     <p className='leading-6'>Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
                 </div>
                 <div>
@@ -49,9 +49,9 @@ const Footer = () => {
                 </div>
             </div>
             <hr className='my-8 mt-15 w-10/12 mx-auto text-white' />
-            <div className='flex flex-col md:flex-row justify-between text-white w-10/12 mx-auto'>
+            <div className='opacity-60 flex flex-col-reverse md:flex-row justify-between text-white w-11/12 md:w-10/12 mx-auto text-center md:text-left gap-10'>
                 <p>© 2026 Digitools. All rights reserved.</p>
-                <ul className='flex gap-6'>
+                <ul className='flex gap-3 md:gap-6'>
                     <li><a href="">Privacy Policy </a></li>
                     <li><a href="">Terms of Service    </a></li>
                     <li><a href="">Cookies</a></li>

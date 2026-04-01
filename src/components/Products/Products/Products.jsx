@@ -8,7 +8,7 @@ const Products = ({productData,cartedProducts,setcartedPtoduct}) => {
     const [productPrice,setproductPrice] = useState(0)
     
     return (
-        <div className='w-10/12 mx-auto mt-25'>
+        <div className='w-10/12 mx-auto mt-25 mb-10'>
             <div className='text-center space-y-5'>
                 <h2 className='text-[48px] font-extrabold '>Premium Digital Tools</h2>
                 <p className='text-[#627382]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>

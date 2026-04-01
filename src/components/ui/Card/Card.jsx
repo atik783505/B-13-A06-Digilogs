@@ -43,7 +43,7 @@ const Card = ({ products,cartedProducts,setcartedPtoduct,productPrice,setproduct
 
                     <div className="mt-6">
                         <button onClick={handleBuy} className={`btn btn-primary btn-block  text-white rounded-full ${isAlreadyBuyed?'bg-green-600':'bg-gradient-to-r from-blue-500 to-purple-500'}`}>
-                        {isAlreadyBuyed?'Add to Cart':'Buy Now'}</button>
+                        {isAlreadyBuyed?'Added to Cart':'Buy Now'}</button>
                     </div>
                 </div>
             </div>

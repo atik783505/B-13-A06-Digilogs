@@ -8,7 +8,7 @@ const Steps = () => {
         <div className='w-11/12 md:w-10/12 mx-auto text-center p-5 md:p-24 my-24 bg-[#F9FAFC]'>
             <h1 className='text-[48px] font-extrabold'>Get Started in 3 Steps</h1>
             <p>Start using premium digital tools in minutes, not hours.</p>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4  justify-between'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  justify-between'>
                 <div className='bg-white space-y-4 text-center p-10'>
                     <div className='flex justify-end text-white'>
                     <span className='bg-purple-700 w-6 h-6 badge badge-sm text-white rounded-full'>01</span>

@@ -1,16 +1,23 @@
-# React + Vite
+## 🚀 DigiLog - Digital Marketplace
+DigiLog is a clean and modern web app I built to showcase premium digital tools. It’s designed to be fast, minimal, and super easy to navigate for users looking for software and creative assets.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 About the Project
+I wanted to create a smooth shopping experience for digital products. From browsing cool tools to adding them to a cart and "checking out," every part of the UI is built with the user in mind.
 
-Currently, two official plugins are available:
+## 🛠️ Tech I Used
+1. React.js (Frontend Library)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+2. Tailwind CSS & DaisyUI (For styling and layout)
 
-## React Compiler
+3. JavaScript (ES6+) (Core logic)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. React-Toastify (For those sweet success/error alerts)
 
-## Expanding the ESLint configuration
+5. JSON (To manage all the product data)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+1. Smart Shopping Cart: You can add products in real-time, and it automatically calculates the total price. It even alerts you if you try to checkout with an empty cart!
+
+2. Fully Responsive: It looks great on everything—from a tiny smartphone to a huge desktop monitor. I used specific breakpoints to keep the layout clean on all devices.
+
+3. Data-Driven UI: All the product information comes from a JSON file, making it super easy to update or add new items without touching the main code.
